@@ -1,0 +1,20 @@
+T-Spice - Tanner SPICE
+Version 16.30
+Network license
+Product Release ID: T-Spice Win64 16.30.20150626.02:41:53
+Copyright © 1988-2015 Mentor Graphics Corporation
+
+	Parsing "C:\Users\Orhun\Desktop\VLSI\NAND.spc"
+	Initializing parser from header file "C:\Program Files\Tanner EDA\Tanner Tools v16.3\tiburonda\models\VAdatabase.sp"
+
+Start of NAND.spc
+Fatal Error : "NAND.spc" line 18 Could not resolve model "NMOS" referenced by "M1"
+Fatal Error : "NAND.spc" line 19 Could not resolve model "NMOS" referenced by "M2"
+Fatal Error : "NAND.spc" line 20 Could not resolve model "PMOS" referenced by "M3"
+Fatal Error : "NAND.spc" line 21 Could not resolve model "PMOS" referenced by "M4"
+
+Overhead                     0.72 seconds
+-----------------------------------------
+Total                        0.74 seconds
+
+Simulation failed	with  4 Fatal Errors

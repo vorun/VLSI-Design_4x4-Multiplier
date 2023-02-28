@@ -1,0 +1,82 @@
+* SPICE export by:  S-Edit 16.30
+* Export time:      Mon Nov 07 20:46:55 2022
+* Design:           Full_Adder
+* Cell:             Full_Adder1
+* Interface:        view0
+* View:             view0
+* View type:        connectivity
+* Export as:        top-level cell
+* Export mode:      hierarchical
+* Exclude empty cells: yes
+* Exclude .model:   no
+* Exclude .end:     no
+* Exclude simulator commands:     no
+* Expand paths:     yes
+* Wrap lines:       no
+* Root path:        C:\Users\Orhun\Desktop\VLSI\Full_Adder
+* Exclude global pins:   no
+* Exclude instance locations: no
+* Control property name(s): SPICE
+
+********* Simulation Settings - General Section *********
+.include "C:\Users\Orhun\Desktop\VLSI\VLSI_tech_files\SCN_0.25u_CMOS.md"
+
+*************** Subcircuits *****************
+.subckt Inverter In Out Gnd Vdd 
+MNMOS_2 Out In Gnd 0 NMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=-100 $y=-300 $w=400 $h=600
+MPMOS_1 Out In Vdd Vdd PMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=-100 $y=500 $w=400 $h=600
+.ends
+
+.subckt NOR A B Out Gnd Vdd 
+MNMOS_1 Out A Gnd 0 NMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=-700 $y=-700 $w=400 $h=600
+MNMOS_2 Out B Gnd 0 NMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=700 $y=-700 $w=400 $h=600
+MPMOS_1 N_1 A Vdd Vdd PMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=0 $y=1000 $w=400 $h=600
+MPMOS_2 Out B N_1 Vdd PMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=0 $y=400 $w=400 $h=600
+.ends
+
+.subckt AND A B Out Gnd Vdd 
+XInverter_1 N_1 Out Gnd Vdd Inverter $ $x=2300 $y=-1300 $w=1800 $h=1800
+MNMOS_1 N_1 B N_2 0 NMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=200 $y=-1800 $w=400 $h=600
+MNMOS_2 N_2 A Gnd 0 NMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=200 $y=-2600 $w=400 $h=600
+MPMOS_1 N_1 A Vdd Vdd PMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=-500 $y=-700 $w=400 $h=600
+MPMOS_2 N_1 A Vdd Vdd PMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=900 $y=-700 $w=400 $h=600
+.ends
+
+.subckt OR A B Out Gnd Vdd 
+XInverter_1 N_1 Out Gnd Vdd Inverter $ $x=2000 $y=3400 $w=1800 $h=1800
+XNOR_1 A B N_1 Gnd Vdd NOR $ $x=200 $y=3400 $w=1800 $h=1800
+.ends
+
+.subckt XOR A B Out Gnd Vdd 
+XInverter_2 B B- Gnd Vdd Inverter $ $x=-2000 $y=-2700 $w=1800 $h=1800
+XInverter_4 A A- Gnd Vdd Inverter $ $x=-2000 $y=-100 $w=1800 $h=1800
+MNMOS_1 Out A- N_1 0 NMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=200 $y=-2000 $w=400 $h=600
+MNMOS_2 Out A N_2 0 NMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=2300 $y=-2000 $w=400 $h=600
+MNMOS_3 N_1 B- Gnd 0 NMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=200 $y=-2900 $w=400 $h=600
+MNMOS_4 N_2 B Gnd 0 NMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=2300 $y=-2900 $w=400 $h=600
+MPMOS_1 N_3 A Vdd Vdd PMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=200 $y=200 $w=400 $h=600
+MPMOS_2 N_4 A- Vdd Vdd PMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=2300 $y=200 $w=400 $h=600
+MPMOS_3 Out B- N_3 Vdd PMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=200 $y=-700 $w=400 $h=600
+MPMOS_4 Out B N_4 Vdd PMOS W=2.5u L=250n AS=2.25p PS=6.8u AD=2.25p PD=6.8u $ $x=2300 $y=-700 $w=400 $h=600
+.ends
+
+
+***** Top Level *****
+XAND_1 C_in N_3 N_1 Gnd Vdd AND $ $x=3800 $y=-800 $w=1800 $h=1800
+XAND_2 B A N_2 Gnd Vdd AND $ $x=3800 $y=-3500 $w=1800 $h=1800
+XOR_1 N_1 N_2 C_out Gnd Vdd OR $ $x=7800 $y=-2200 $w=1800 $h=1800
+XXOR_1 A B N_3 Gnd Vdd XOR $ $x=-1500 $y=1800 $w=1800 $h=1800
+XXOR_2 N_3 C_in Sum Gnd Vdd XOR $ $x=1500 $y=600 $w=1800 $h=1800
+
+********* Simulation Settings - Analysis Section *********
+
+********* Simulation Settings - Additional SPICE Commands *********
+Vppp Vdd Gnd 5V
+VA A Gnd dc 0 BIT ({00001111} pw=10n lt=10n ht=10n on=5 off=0 rt=0.1n ft=0.1n delay=0) AC 0
+VB B Gnd dc 0 BIT ({00110011} pw=10n lt=10n ht=10n on=5 off=0 rt=0.1n ft=0.1n delay=0) AC 0
+VC_in C_in Gnd dc 0 BIT ({01010101} pw=10n lt=10n ht=10n on=5 off=0 rt=0.1n ft=0.1n delay=0) AC 0
+
+.tran 80p 80n
+.print tran v(A,Gnd) v(B,Gnd) v(C_in,Gnd) v(Sum,Gnd) v(C_out,Gnd)
+.end
+

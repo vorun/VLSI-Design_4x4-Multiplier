@@ -1,0 +1,50 @@
+T-Spice - Tanner SPICE
+Version 16.30
+Network license
+Product Release ID: T-Spice Win64 16.30.20150626.02:41:53
+Copyright © 1988-2015 Mentor Graphics Corporation
+
+	Parsing "C:\Users\Orhun\Desktop\VLSI\4x4_MULTIPLIER_3.spc"
+	Initializing parser from header file "C:\Program Files\Tanner EDA\Tanner Tools v16.3\tiburonda\models\VAdatabase.sp"
+	Including "C:\Users\Orhun\Desktop\VLSI\VLSI_tech_files\SCN_0.25u_CMOS.md"
+
+Start of 4x4_MULTIPLIER_3.spc
+Loaded BSIM3v31 model library, Berkeley BSIM3 v3.1.0 with extensions
+
+General options:
+        threads = 4
+
+ Device and node counts:
+              MOSFETs -     528
+    MOSFET geometries -       8
+      Voltage sources -      10
+   Subckt Definitions -       4
+     Subckt Instances -      40
+     Unique Instances -       4
+    Model Definitions -       2
+      Computed Models -       2
+    Independent nodes -     264
+       Boundary nodes -      11
+          Total nodes -     275
+
+	Opening simulation database "C:\Users\Orhun\Desktop\VLSI\4x4_MULTIPLIER_3.tsim"
+Conventional DC operating point computation failed
+Final gmin value = 1e-006, dcstep = 100
+Gmin stepping failed
+Source stepping failed at   2.91rampup
+Multi-rate source stepping succeeded
+Future re-simulations of this circuit may run faster with the command:
+	.options dcmethod=multirate
+Warning : "4x4_MULTIPLIER_3.spc" line 120 Source Vm0 DC OP value (0) differs from the transient time 0 value (5)
+Warning : "4x4_MULTIPLIER_3.spc" line 125 Source Vq0 DC OP value (0) differs from the transient time 0 value (5)
+        : Operating Point will be calculated twice for DC and Transient values
+
+Parsing                      0.14 seconds
+Setup                        0.30 seconds
+DC operating point          13.94 seconds
+Transient Analysis           2.10 seconds
+Overhead                     0.98 seconds
+-----------------------------------------
+Total                       17.47 seconds
+
+Simulation completed	with  2 Warnings

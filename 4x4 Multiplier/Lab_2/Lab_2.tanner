@@ -1,0 +1,7 @@
+workspace loadfrom -path .
+cell open -design Lab_2 -cell nand_3_pack -type schematic -newwindow
+window move -left 160 -top 160 -width 1177 -height 535 -undock -max 
+window fit -x0 -3032 -y0 -1582 -x1 4460 -y1 2319 -units iu
+workspace dockinglayout load -file dockinglayout.xml
+source open.design -relativeto user -encoding utf-8
+source open.design -relativeto design -encoding utf-8

@@ -1,0 +1,39 @@
+T-Spice - Tanner SPICE
+Version 16.30
+Network license
+Product Release ID: T-Spice Win64 16.30.20150626.02:41:53
+Copyright © 1988-2015 Mentor Graphics Corporation
+
+	Parsing "C:\Users\Orhun\Desktop\VLSI\NOR1.spc"
+	Initializing parser from header file "C:\Program Files\Tanner EDA\Tanner Tools v16.3\tiburonda\models\VAdatabase.sp"
+	Including "C:\Users\Orhun\Desktop\VLSI\VLSI_tech_files\SCN_0.25u_CMOS.md"
+
+Start of NOR1.spc
+Loaded BSIM3v31 model library, Berkeley BSIM3 v3.1.0 with extensions
+
+General options:
+        threads = 1
+
+ Device and node counts:
+              MOSFETs -       8
+    MOSFET geometries -       8
+      Voltage sources -       6
+   Subckt Definitions -       1
+     Subckt Instances -       0
+    Model Definitions -       2
+      Computed Models -       2
+    Independent nodes -       4
+       Boundary nodes -       7
+          Total nodes -      11
+
+	Opening simulation database "C:\Users\Orhun\Desktop\VLSI\NOR1.tsim"
+
+Parsing                      0.59 seconds
+Setup                        0.28 seconds
+DC operating point           0.04 seconds
+Transient Analysis           0.31 seconds
+Overhead                     1.10 seconds
+-----------------------------------------
+Total                        2.31 seconds
+
+Simulation completed

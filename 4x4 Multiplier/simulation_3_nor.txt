@@ -1,0 +1,10 @@
+Vppp Vdd Gnd 5V
+VGnd Gnd_ Gnd 0
+VA A Gnd dc 0 BIT ({0000000011111111} pw=10n lt=10n ht=10n on=5 off=0 rt=0.1n ft=0.1n delay=0) AC 0
+VB B Gnd dc 0 BIT ({0000111100001111} pw=10n lt=10n ht=10n on=5 off=0 rt=0.1n ft=0.1n delay=0) AC 0
+VC C Gnd dc 0 BIT ({0011001100110011} pw=10n lt=10n ht=10n on=5 off=0 rt=0.1n ft=0.1n delay=0) AC 0
+VD D Gnd dc 0 BIT ({0101010101010101} pw=10n lt=10n ht=10n on=5 off=0 rt=0.1n ft=0.1n delay=0) AC 0
+.tran 160p 160n
+.print tran v(A,Gnd) v(B,Gnd) v(C,Gnd) v(D,Gnd) v(Out,Gnd)
+
+.end

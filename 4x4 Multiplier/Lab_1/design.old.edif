@@ -1,0 +1,1109 @@
+(edif Lab_1
+	(edifVersion 2 0 0)
+	(edifLevel 0)
+	(keywordMap
+		(keywordLevel 0)
+	)
+	(status
+		(written
+			(timeStamp 2022 10 14 17 30 31)
+			(author "Orhun")
+			(program "Tanner EDA S-Edit"
+				(version "16.30 build 9172")
+			)
+			(property TannerEdifVersion
+				(integer 10)
+			)
+		)
+	)
+	(external Devices
+		(edifLevel 0)
+		(technology
+			(numberDefinition
+				(scale 1
+					(e 1 -12)
+					(unit CAPACITANCE)
+				)
+				(scale 800000
+					127
+					(unit DISTANCE)
+				)
+			)
+		)
+		
+		(cell PMOS
+			(cellType GENERIC)
+			(view PMOS3
+				(viewType SCHEMATIC)
+				(interface
+					(port D)
+					(port G
+						(direction INPUT)
+					)
+					(port S)
+					(property TannerStandard
+						(boolean
+							(true)
+						)
+						(property RevisionCount
+							(string "4")
+						)
+					)
+					(symbol)
+				)
+			)
+		)
+		(cell NMOS
+			(cellType GENERIC)
+			(view NMOS3
+				(viewType SCHEMATIC)
+				(interface
+					(port D)
+					(port G
+						(direction INPUT)
+					)
+					(port S)
+					(property TannerStandard
+						(boolean
+							(true)
+						)
+						(property RevisionCount
+							(string "4")
+						)
+					)
+					(symbol)
+				)
+			)
+		)
+	)
+	(external Misc
+		(edifLevel 0)
+		(technology
+			(numberDefinition
+				(scale 1
+					(e 1 -12)
+					(unit CAPACITANCE)
+				)
+				(scale 800000
+					127
+					(unit DISTANCE)
+				)
+			)
+		)
+		
+		(cell Vdd
+			(cellType GENERIC)
+			(view Main
+				(viewType SCHEMATIC)
+				(interface
+					(port Vdd
+						(property GLOBAL
+							(boolean
+								(true)
+							)
+						)
+					)
+					(property TannerStandard
+						(boolean
+							(true)
+						)
+						(property RevisionCount
+							(string "4")
+						)
+					)
+					(symbol)
+				)
+			)
+		)
+		(cell Gnd
+			(cellType GENERIC)
+			(view Main
+				(viewType SCHEMATIC)
+				(interface
+					(port Gnd
+						(property GLOBAL
+							(boolean
+								(true)
+							)
+						)
+					)
+					(property TannerStandard
+						(boolean
+							(true)
+						)
+						(property RevisionCount
+							(string "4")
+						)
+					)
+					(symbol)
+				)
+			)
+		)
+	)
+	(library Lab_1
+		(edifLevel 0)
+		(technology
+			(numberDefinition
+				(scale 1
+					(e 1 -12)
+					(unit CAPACITANCE)
+				)
+				(scale 5000000
+					127
+					(unit DISTANCE)
+				)
+			)
+			(figureGroup background
+				(visible
+					(true)
+				)
+				(color 0 0 0)
+				(pathWidth 0)
+			)
+			(figureGroup device
+				(visible
+					(true)
+				)
+				(color 0 80 40)
+				(pathWidth 0)
+			)
+			(figureGroup wire
+				(visible
+					(true)
+				)
+				(color 23 75 100)
+				(pathWidth 0)
+			)
+			(figureGroup netlabel
+				(visible
+					(true)
+				)
+				(color 23 75 100)
+				(pathWidth 0)
+			)
+			(figureGroup text
+				(visible
+					(true)
+				)
+				(color 100 0 0)
+				(pathWidth 0)
+			)
+			(figureGroup portshape
+				(visible
+					(true)
+				)
+				(color 100 0 100)
+				(pathWidth 0)
+			)
+			(figureGroup pin
+				(visible
+					(true)
+				)
+				(color 100 0 100)
+				(pathWidth 0)
+			)
+			(figureGroup instance
+				(visible
+					(false)
+				)
+				(color 85 80 0)
+				(pathWidth 0)
+			)
+			(figureGroup instance_with_name_visible
+				(visible
+					(true)
+				)
+				(color 85 80 0)
+				(pathWidth 0)
+			)
+			(figureGroup cellname
+				(visible
+					(false)
+				)
+				(color 0 80 40)
+				(pathWidth 0)
+			)
+			(figureGroup cellname_with_name_visible
+				(visible
+					(true)
+				)
+				(color 0 80 40)
+				(pathWidth 0)
+			)
+			(figureGroup property
+				(visible
+					(true)
+				)
+				(color 75 75 75)
+				(pathWidth 0)
+			)
+		)
+		
+		(cell Inverter
+			(cellType GENERIC)
+			(view view0
+				(viewType SCHEMATIC)
+				(interface
+					(port In
+						(direction INPUT)
+					)
+					(port Gnd
+						(direction OUTPUT)
+						(property GLOBAL
+							(boolean
+								(true)
+							)
+						)
+					)
+					(port Out
+						(direction OUTPUT)
+					)
+					(port Vdd
+						(direction OUTPUT)
+						(property GLOBAL
+							(boolean
+								(true)
+							)
+						)
+					)
+					(property
+						(rename ANNOTATE_PERIOD_In "ANNOTATE.In")
+						(string "[annotate port In]")
+						(property Type
+							(string "String")
+						)
+					)
+					(property
+						(rename ANNOTATE_PERIOD_Gnd "ANNOTATE.Gnd")
+						(string "[annotate port Gnd]")
+						(property Type
+							(string "String")
+						)
+					)
+					(property
+						(rename ANNOTATE_PERIOD_Out "ANNOTATE.Out")
+						(string "[annotate port Out]")
+						(property Type
+							(string "String")
+						)
+					)
+					(property
+						(rename ANNOTATE_PERIOD_Vdd "ANNOTATE.Vdd")
+						(string "[annotate port Vdd]")
+						(property Type
+							(string "String")
+						)
+					)
+					(symbol
+						(property TannerStandard
+							(boolean
+								(true)
+							)
+							(property Timestamp
+								(string "2022 10 14 17 30 31")
+							)
+						)
+						(boundingBox
+							(rectangle
+								(pt -400 -400)
+								(pt 1400 1400)
+							)
+						)
+						(keywordDisplay cell
+							(display
+								(figureGroupOverride cellname
+									(visible
+										(true)
+									)
+									(textHeight 33)
+								)
+								(justify LOWERCENTER)
+								(origin
+									(pt 500 500)
+								)
+							)
+						)
+						(keywordDisplay instance
+							(display
+								(figureGroupOverride instance
+									(visible
+										(true)
+									)
+									(textHeight 33)
+								)
+								(justify LOWERCENTER)
+								(origin
+									(pt 500 400)
+								)
+							)
+						)
+						(property
+							(rename ANNOTATE_PERIOD_In "ANNOTATE.In")
+							(string)
+							(property VisibilityWhenNotEvaluated
+								(string "Hidden")
+							)
+						)
+						(property
+							(rename ANNOTATE_PERIOD_Gnd "ANNOTATE.Gnd")
+							(string)
+							(property VisibilityWhenNotEvaluated
+								(string "Hidden")
+							)
+						)
+						(property
+							(rename ANNOTATE_PERIOD_Out "ANNOTATE.Out")
+							(string)
+							(property VisibilityWhenNotEvaluated
+								(string "Hidden")
+							)
+						)
+						(property
+							(rename ANNOTATE_PERIOD_Vdd "ANNOTATE.Vdd")
+							(string)
+							(property VisibilityWhenNotEvaluated
+								(string "Hidden")
+							)
+						)
+						(propertyDisplay
+							(name ANNOTATE_PERIOD_In
+								(display
+									(figureGroupOverride property
+										(visible
+											(false)
+										)
+										(textHeight 33)
+									)
+									(justify CENTERRIGHT)
+									(origin
+										(pt -400 633)
+									)
+								)
+							)
+							(display
+								(figureGroupOverride property
+									(textHeight 33)
+								)
+								(justify CENTERRIGHT)
+								(origin
+									(pt -400 633)
+								)
+							)
+						)
+						(propertyDisplay
+							(name ANNOTATE_PERIOD_Gnd
+								(display
+									(figureGroupOverride property
+										(visible
+											(false)
+										)
+										(textHeight 33)
+									)
+									(justify CENTERRIGHT)
+									(orientation R90)
+									(origin
+										(pt 449 -400)
+									)
+								)
+							)
+							(display
+								(figureGroupOverride property
+									(textHeight 33)
+								)
+								(justify CENTERRIGHT)
+								(orientation R90)
+								(origin
+									(pt 449 -400)
+								)
+							)
+						)
+						(propertyDisplay
+							(name ANNOTATE_PERIOD_Out
+								(display
+									(figureGroupOverride property
+										(visible
+											(false)
+										)
+										(textHeight 33)
+									)
+									(justify CENTERLEFT)
+									(origin
+										(pt 1400 633)
+									)
+								)
+							)
+							(display
+								(figureGroupOverride property
+									(textHeight 33)
+								)
+								(justify CENTERLEFT)
+								(origin
+									(pt 1400 633)
+								)
+							)
+						)
+						(propertyDisplay
+							(name ANNOTATE_PERIOD_Vdd
+								(display
+									(figureGroupOverride property
+										(visible
+											(false)
+										)
+										(textHeight 33)
+									)
+									(justify CENTERLEFT)
+									(orientation R90)
+									(origin
+										(pt 449 1400)
+									)
+								)
+							)
+							(display
+								(figureGroupOverride property
+									(textHeight 33)
+								)
+								(justify CENTERLEFT)
+								(orientation R90)
+								(origin
+									(pt 449 1400)
+								)
+							)
+						)
+						(annotate
+							(stringDisplay "In"
+								(display
+									(figureGroupOverride text
+										(textHeight 33)
+									)
+									(justify CENTERLEFT)
+									(origin
+										(pt 100 600)
+									)
+								)
+							)
+						)
+						(annotate
+							(stringDisplay "Out"
+								(display
+									(figureGroupOverride text
+										(textHeight 33)
+									)
+									(justify CENTERRIGHT)
+									(origin
+										(pt 900 600)
+									)
+								)
+							)
+						)
+						(annotate
+							(stringDisplay "Vdd"
+								(display
+									(figureGroupOverride text
+										(textHeight 33)
+									)
+									(justify CENTERRIGHT)
+									(orientation R90)
+									(origin
+										(pt 400 900)
+									)
+								)
+							)
+						)
+						(annotate
+							(stringDisplay "Gnd"
+								(display
+									(figureGroupOverride text
+										(textHeight 33)
+									)
+									(justify CENTERLEFT)
+									(orientation R90)
+									(origin
+										(pt 400 100)
+									)
+								)
+							)
+						)
+						(portImplementation
+							(name In
+								(display
+									(figureGroupOverride pin
+										(visible
+											(false)
+										)
+										(textHeight 33)
+									)
+									(justify CENTERRIGHT)
+									(origin
+										(pt -400 600)
+									)
+								)
+							)
+							(connectLocation
+								(figure portshape
+									(dot
+										(pt -400 600)
+									)
+								)
+							)
+							(figure portshape
+								(rectangle
+									(pt -404 596)
+									(pt -396 604)
+								)
+							)
+						)
+						(portImplementation
+							(name Out
+								(display
+									(figureGroupOverride pin
+										(visible
+											(false)
+										)
+										(textHeight 33)
+									)
+									(justify CENTERLEFT)
+									(origin
+										(pt 1400 600)
+									)
+								)
+							)
+							(connectLocation
+								(figure portshape
+									(dot
+										(pt 1400 600)
+									)
+								)
+							)
+							(figure portshape
+								(rectangle
+									(pt 1396 596)
+									(pt 1404 604)
+								)
+							)
+						)
+						(portImplementation
+							(name Vdd
+								(display
+									(figureGroupOverride pin
+										(visible
+											(false)
+										)
+										(textHeight 33)
+									)
+									(justify CENTERLEFT)
+									(orientation R90)
+									(origin
+										(pt 400 1400)
+									)
+								)
+							)
+							(connectLocation
+								(figure portshape
+									(dot
+										(pt 400 1400)
+									)
+								)
+							)
+							(figure portshape
+								(rectangle
+									(pt 396 1396)
+									(pt 404 1404)
+								)
+							)
+						)
+						(portImplementation
+							(name Gnd
+								(display
+									(figureGroupOverride pin
+										(visible
+											(false)
+										)
+										(textHeight 33)
+									)
+									(justify CENTERRIGHT)
+									(orientation R90)
+									(origin
+										(pt 400 -400)
+									)
+								)
+							)
+							(connectLocation
+								(figure portshape
+									(dot
+										(pt 400 -400)
+									)
+								)
+							)
+							(figure portshape
+								(rectangle
+									(pt 396 -404)
+									(pt 404 -396)
+								)
+							)
+						)
+						(figure device
+							(rectangle
+								(pt 0 0)
+								(pt 1000 1000)
+							)
+						)
+						(figure device
+							(path
+								(pointList
+									(pt 0 600)
+									(pt -400 600)
+								)
+							)
+						)
+						(figure device
+							(path
+								(pointList
+									(pt 1000 600)
+									(pt 1400 600)
+								)
+							)
+						)
+						(figure device
+							(path
+								(pointList
+									(pt 400 1000)
+									(pt 400 1400)
+								)
+							)
+						)
+						(figure device
+							(path
+								(pointList
+									(pt 400 0)
+									(pt 400 -400)
+								)
+							)
+						)
+					)
+				)
+				(property TannerStandard
+					(boolean
+						(true)
+					)
+					(property RevisionCount
+						(string "1")
+					)
+				)
+				(status
+					(written
+						(timeStamp 2022 10 07 17 19 42)
+					)
+				)
+				(contents
+					(page Page0
+						(portImplementation
+							(name In
+								(display
+									(figureGroupOverride pin
+										(textHeight 111)
+									)
+									(justify CENTERRIGHT)
+									(origin
+										(pt -800 100)
+									)
+								)
+							)
+							(connectLocation
+								(figure portshape
+									(dot
+										(pt -800 100)
+									)
+								)
+							)
+							(figure portshape
+								(rectangle
+									(pt -804 96)
+									(pt -796 104)
+								)
+							)
+						)
+						(portImplementation
+							(name Out
+								(display
+									(figureGroupOverride pin
+										(textHeight 111)
+									)
+									(justify CENTERLEFT)
+									(origin
+										(pt 400 100)
+									)
+								)
+							)
+							(connectLocation
+								(figure portshape
+									(dot
+										(pt 400 100)
+									)
+								)
+							)
+							(figure portshape
+								(rectangle
+									(pt 396 96)
+									(pt 404 104)
+								)
+							)
+						)
+						(instance GND1
+							(viewRef Main
+								(cellRef Gnd
+									(libraryRef Misc)
+								)
+							)
+							(transform
+								(origin
+									(pt 100 -600)
+								)
+							)
+						)
+						(instance Vdd1
+							(viewRef Main
+								(cellRef Vdd
+									(libraryRef Misc)
+								)
+							)
+							(transform
+								(origin
+									(pt 100 800)
+								)
+							)
+						)
+						(instance NMOS_2
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt -300 -300)
+								)
+							)
+						)
+						(instance PMOS_1
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt -300 500)
+								)
+							)
+						)
+						(net In
+							(joined
+								(portRef In)
+								(portRef G
+									(instanceRef NMOS_2)
+								)
+								(portRef G
+									(instanceRef PMOS_1)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -500 100)
+										(pt -500 500)
+										(pt -300 500)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -300 -300)
+										(pt -500 -300)
+										(pt -500 100)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -800 100)
+										(pt -500 100)
+									)
+								)
+							)
+						)
+						(net Gnd
+							(joined
+								(portRef Gnd
+									(instanceRef GND1)
+								)
+								(portRef S
+									(instanceRef NMOS_2)
+								)
+							)
+						)
+						(net Out
+							(joined
+								(portRef Out)
+								(portRef D
+									(instanceRef NMOS_2)
+								)
+								(portRef D
+									(instanceRef PMOS_1)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 100 0)
+										(pt 100 100)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 100 100)
+										(pt 100 200)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 400 100)
+										(pt 100 100)
+									)
+								)
+							)
+						)
+						(net Vdd
+							(joined
+								(portRef S
+									(instanceRef PMOS_1)
+								)
+								(portRef Vdd
+									(instanceRef Vdd1)
+								)
+							)
+						)
+						(commentGraphics)
+					)
+				)
+			)
+		)
+		(cell delay
+			(cellType GENERIC)
+			(view view0
+				(viewType SCHEMATIC)
+				(interface
+					(port In
+						(direction INPUT)
+					)
+					(port Out
+						(direction OUTPUT)
+					)
+				)
+				(property TannerStandard
+					(boolean
+						(true)
+					)
+					(property RevisionCount
+						(string "1")
+					)
+				)
+				(status
+					(written
+						(timeStamp 2022 10 14 17 30 31)
+					)
+				)
+				(contents
+					(page Page0
+						(portImplementation
+							(name In
+								(display
+									(figureGroupOverride pin
+										(textHeight 111)
+									)
+									(justify CENTERRIGHT)
+									(origin
+										(pt -2200 -100)
+									)
+								)
+							)
+							(connectLocation
+								(figure portshape
+									(dot
+										(pt -2200 -100)
+									)
+								)
+							)
+							(figure portshape
+								(rectangle
+									(pt -2204 -104)
+									(pt -2196 -96)
+								)
+							)
+						)
+						(portImplementation
+							(name Out
+								(display
+									(figureGroupOverride pin
+										(textHeight 111)
+									)
+									(justify CENTERLEFT)
+									(origin
+										(pt 1400 -100)
+									)
+								)
+							)
+							(connectLocation
+								(figure portshape
+									(dot
+										(pt 1400 -100)
+									)
+								)
+							)
+							(figure portshape
+								(rectangle
+									(pt 1396 -104)
+									(pt 1404 -96)
+								)
+							)
+						)
+						(instance GND1
+							(viewRef Main
+								(cellRef Gnd
+									(libraryRef Misc)
+								)
+							)
+							(transform
+								(origin
+									(pt -500 -1100)
+								)
+							)
+						)
+						(instance Vdd1
+							(viewRef Main
+								(cellRef Vdd
+									(libraryRef Misc)
+								)
+							)
+							(transform
+								(origin
+									(pt -500 700)
+								)
+							)
+						)
+						(instance Inverter_1
+							(viewRef view0
+								(cellRef Inverter)
+							)
+							(transform
+								(origin
+									(pt -1800 -700)
+								)
+							)
+						)
+						(instance Inverter_2
+							(viewRef view0
+								(cellRef Inverter)
+							)
+							(transform
+								(origin
+									(pt 0 -700)
+								)
+							)
+						)
+						(net In
+							(joined
+								(portRef In)
+								(portRef In
+									(instanceRef Inverter_1)
+								)
+							)
+						)
+						(net Gnd
+							(joined
+								(portRef Gnd
+									(instanceRef GND1)
+								)
+								(portRef Gnd
+									(instanceRef Inverter_1)
+								)
+								(portRef Gnd
+									(instanceRef Inverter_2)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -1400 -1100)
+										(pt -500 -1100)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -500 -1100)
+										(pt 400 -1100)
+									)
+								)
+							)
+						)
+						(net N_1
+							(joined
+								(portRef In
+									(instanceRef Inverter_2)
+								)
+								(portRef Out
+									(instanceRef Inverter_1)
+								)
+							)
+						)
+						(net Out
+							(joined
+								(portRef Out)
+								(portRef Out
+									(instanceRef Inverter_2)
+								)
+							)
+						)
+						(net Vdd
+							(joined
+								(portRef Vdd
+									(instanceRef Inverter_1)
+								)
+								(portRef Vdd
+									(instanceRef Inverter_2)
+								)
+								(portRef Vdd
+									(instanceRef Vdd1)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -1400 700)
+										(pt -500 700)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -500 700)
+										(pt 400 700)
+									)
+								)
+							)
+						)
+						(commentGraphics)
+					)
+				)
+			)
+		)
+	)
+)
